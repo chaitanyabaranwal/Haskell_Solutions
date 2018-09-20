@@ -37,8 +37,4 @@ xform :: (X, Y) -> (Z, Z)
 xform (x, y) = (xz x, yz y)
 
 munge :: (x -> y) -> (y -> (w, z)) -> x -> w
-xToy :: x -> y
-yTowz :: y -> (w, z)
-xToy x = y
-yTowz y = (w, _)
 munge xToy yTowz x = fst (yTowz (xToy x))
